@@ -1,3 +1,19 @@
 body {
     background-color: aquamarine;
+    font-family: Verdana, sans-serif;
+}
+
+#left_column {
+    float: left;
+    width: 25%;
+}
+
+#center_column {
+    float: left;
+    width: 50%;
+}
+
+#right_column {
+    float: left;
+    width: 25%;
 }

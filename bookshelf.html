@@ -8,32 +8,46 @@
     <script src="js/bookshelf.js"></script>
 </head>
 <body>
-<div>
-    <h1>Bookshelf</h1>
-    <p>Bookshelf application.</p>
-    <table id="bookshelf">
-        <tbody id="bookshelf_tbody">
-            <tr>
-                <th>Name</th>
-                <th>Authors</th>
-            </tr>
-            <tr>
-                <td>Book 1</td>
-                <td>Author 1</td>
-            </tr>
-            <tr>
-                <td>Book 2</td>
-                <td>Author 2</td>
-            </tr>
-        </tbody>
-    </table>
-    <form id="form">
-        Name of the book:<br>
-        <input type="text" name="book_name" id="book_name" title="book_name"><br>
-        Author(s):<br>
-        <input type="text" name="book_authors" id="book_authors" title="book_authors"><br>
-        <input type="submit" value="Submit" id="submit_button">
-    </form>
+<div id="row">
+    <div id="left_column">&nbsp;</div>
+    <div id="center_column">
+        <h1>Bookshelf</h1>
+        <p>Bookshelf application.</p>
+        <table id="bookshelf">
+            <tbody id="bookshelf_tbody">
+                <tr>
+                    <th>Name</th>
+                    <th>Authors</th>
+                </tr>
+                <tr>
+                    <td>Book 1</td>
+                    <td>Author 1</td>
+                </tr>
+                <tr>
+                    <td>Book 2</td>
+                    <td>Author 2</td>
+                </tr>
+            </tbody>
+        </table>
+        <form id="form_add">
+            Name of the book:<br>
+            <input type="text" name="book_name" id="book_name" title="book_name"><br>
+            Author(s):<br>
+            <input type="text" name="book_authors" id="book_authors" title="book_authors"><br>
+            <input type="submit" value="Submit" id="submit_button">
+        </form>
+        <form id="form_delete">
+            Book to be removed:<br>
+            <input type="text" name="remove_book_name" id="remove_book_name" title="remove_book_name"><br>
+            <input type="submit" value="Remove" id="remove_button">
+        </form>
+        <form id="form_reorder">
+            <input type="radio" name="reorder_type" value="Reorder by book name" title="reorder_name" checked>Reorder by book name<br>
+            <input type="radio" name="reorder_type" value="Reorder by book author" title="reorder_author">Reorder by book author<br>
+            <input type="submit" value="Reorder" id="reorder_button">
+        </form>
+    </div>
+    <div id="right_column">&nbsp;</div>
 </div>
 </body>
 </html>
