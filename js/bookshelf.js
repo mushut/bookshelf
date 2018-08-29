@@ -32,8 +32,8 @@ $(document).ready(function(){
         if (typeof attr_title !== typeof undefined && attr_title !== false) {
             // Reorganize bookshelf array by title
             bookshelf.sort(function (first, second) {
-                let first_lowercase = first.title.type.toLowerCase();
-                let second_lowercase = second.title.type.toLowerCase();
+                let first_lowercase = first.title.toLowerCase();
+                let second_lowercase = second.title.toLowerCase();
                 if (first_lowercase < second_lowercase) {
                     return -1;
                 }
@@ -47,8 +47,8 @@ $(document).ready(function(){
         if (typeof attr_author !== typeof undefined && attr_author !== false) {
             // Reorganize bookshelf array by author
             bookshelf.sort(function (first, second) {
-                let first_lowercase = first.author.type.toLowerCase();
-                let second_lowercase = second.author.type.toLowerCase();
+                let first_lowercase = first.author.toLowerCase();
+                let second_lowercase = second.author.toLowerCase();
                 if (first_lowercase < second_lowercase) {
                     return -1;
                 }
@@ -63,6 +63,7 @@ $(document).ready(function(){
         let element = "";
         bookshelf.forEach(addBook);
 
+        // Should this be somewhere else?
         function addBook(value, index, array) {
             element = "<tr class='book'><td>" + value.title + "</td><td>" + value.author + "</td></tr>";
 
