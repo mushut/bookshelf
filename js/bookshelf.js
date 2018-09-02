@@ -86,5 +86,7 @@ $(document).ready(function(){
         }
 
         event.preventDefault();
-    }
+    });
+
+    // What other functions?
 });
