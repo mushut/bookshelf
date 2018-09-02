@@ -20,7 +20,6 @@ $(document).ready(function(){
     });
 
     // Form: Reorder elements of the table
-    // Cannot check if works yet. Page refreshes and clears all changes.
     $("#form_reorder").submit(function(event) {
         // Check which option is checked
         let attr_title = $("input[title='reorder_name']").attr("checked");
@@ -74,5 +73,18 @@ $(document).ready(function(){
     });
 
     // Remove element from the table
-    // TBD
+    $("#form_delete").submit(function(event) {
+        let remove_book_name = "#" + $("#remove_book_name").val();
+
+        if ($(remove_book_name).empty() === false) {
+            $(".book td").filter(function() {
+                return $(this).val() === $("#remove_book_name").val();
+            }).remove();
+
+            // Rearrange book to be deleted to last and remove it
+            // TBD
+        }
+
+        event.preventDefault();
+    }
 });
